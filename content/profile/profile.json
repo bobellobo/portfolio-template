@@ -4,17 +4,16 @@
     "email": "you@example.com",
     "linkedinUrl": "https://www.linkedin.com/in/your-handle/",
     "githubUrl": "https://github.com/your-username",
-    "portfolioUrl": "https://your-username.github.io/your-portfolio/",
-    "universityUrl": "https://example.edu"
+    "portfolioUrl": "https://your-username.github.io/your-portfolio/"
   },
   "content": {
     "en": {
-      "description": "Hi there!\nI'm a full-stack developer trained at {university}. I enjoy building maintainable web products with a strong focus on usability, clean architecture, and performance.\n\nUse this section to introduce your background, your strongest technical skills, and the type of opportunities you are looking for.",
-      "exportDescription": "Full-stack developer trained at {university}. I combine user-centered product thinking with practical engineering, from architecture to delivery. Replace this sample summary with your own experience, strengths, and target role."
+      "description": "Hi there!\nI'm a full-stack developer trained at {{link:https://example.edu|Your University}}. I enjoy building maintainable web products with a strong focus on usability, clean architecture, and performance.\n\nUse this section to introduce your background, your strongest technical skills, and the type of opportunities you are looking for.",
+      "exportDescription": "Full-stack developer trained at {{link:https://example.edu|Your University}}. I combine user-centered product thinking with practical engineering, from architecture to delivery. Replace this sample summary with your own experience, strengths, and target role."
     },
     "fr": {
-      "description": "Salut!\nJe suis un développeur full-stack formé à l'{university}. J'aime créer des produits web maintenables avec une attention forte portée à l'expérience utilisateur, à l'architecture et à la performance.\n\nUtilisez cette section pour présenter votre parcours, vos compétences principales et le type d'opportunités que vous recherchez.",
-      "exportDescription": "Développeur full-stack formé à l'{university}. Je combine une approche produit centrée utilisateur avec une exécution technique solide, de l'architecture à la livraison. Remplacez ce résumé par votre propre expérience, vos points forts et le poste visé."
+      "description": "Salut!\nJe suis un développeur full-stack formé à {{link:https://example.edu|votre université}}. J'aime créer des produits web maintenables avec une attention forte portée à l'expérience utilisateur, à l'architecture et à la performance.\n\nUtilisez cette section pour présenter votre parcours, vos compétences principales et le type d'opportunités que vous recherchez.",
+      "exportDescription": "Développeur full-stack formé à {{link:https://example.edu|votre université}}. Je combine une approche produit centrée utilisateur avec une exécution technique solide, de l'architecture à la livraison. Remplacez ce résumé par votre propre expérience, vos points forts et le poste visé."
     }
   }
 }

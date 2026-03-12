@@ -46,7 +46,7 @@
                 </div>
                 <div class="card-content">
                   <h3>{{ project.content[currentLocale].title }}</h3>
-                  <p>{{ project.content[currentLocale].shortDescription }}</p>
+                  <p><InlineRichText :text="project.content[currentLocale].shortDescription" /></p>
                   <div class="card-tags">
                     <span v-for="tech in project.technologies" :key="tech" class="tag">
                       {{ tech }}
@@ -85,6 +85,7 @@
 <script setup lang="ts">
   import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
   import { useI18n } from 'vue-i18n'
+  import InlineRichText from '../Common/InlineRichText.vue'
   import { useProjectsData, type Project, getProjectImageOrFallback } from '../../content/data/projects'
 
   const { locale } = useI18n()

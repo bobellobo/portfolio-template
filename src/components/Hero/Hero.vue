@@ -5,16 +5,7 @@
         <div class="hero-copy">
           <!-- <p class="hero-subtitle">{{ $t('hero.subtitle') }}</p> -->
           <p class="hero-about">
-            {{ profileDescriptionParts.before }}
-            <a
-              class="inline-link"
-              :href="profileIdentity.universityUrl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {{ $t('profile.universityLabel') }}
-            </a>
-            {{ profileDescriptionParts.after }}
+            <InlineRichText :text="profileDescription" />
           </p>
         </div>
         <img class="hero-photo" :src="heroPhoto" :alt="$t('exportView.photoAlt')" />
@@ -35,15 +26,14 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import heroPhoto from '@content/projects/images/business-portfolio-icon.avif'
-import { getProfileContent, getProfileIdentity, splitUniversityPlaceholder } from '../../content/data/profile'
+import InlineRichText from '../Common/InlineRichText.vue'
+import { getProfileContent } from '../../content/data/profile'
 import { getSupportedLocale } from '../../content/locale'
 
 const { locale } = useI18n()
-const profileIdentity = getProfileIdentity()
 
 const currentLocale = computed(() => getSupportedLocale(locale.value))
 const profileDescription = computed(() => getProfileContent(currentLocale.value).description)
-const profileDescriptionParts = computed(() => splitUniversityPlaceholder(profileDescription.value))
 
 const scrollToNextSection = () => {
   const skillsSection = document.getElementById('skills')

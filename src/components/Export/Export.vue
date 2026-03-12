@@ -52,16 +52,7 @@
       <section class="resume-section">
         <h2>{{ $t('exportView.profile') }}</h2>
         <p class="resume-text">
-          {{ exportProfileDescriptionParts.before }}
-          <a
-            class="inline-link"
-            :href="profileIdentity.universityUrl"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {{ $t('profile.universityLabel') }}
-          </a>
-          {{ exportProfileDescriptionParts.after }}
+          <InlineRichText :text="exportProfileDescription" />
         </p>
       </section>
 
@@ -74,7 +65,7 @@
           </div>
           <p class="experience-company">{{ item.content[currentLocale].company }}</p>
           <p v-if="item.content[currentLocale].location" class="experience-location">{{ item.content[currentLocale].location }}</p>
-          <p class="resume-text">{{ item.content[currentLocale].description }}</p>
+          <p class="resume-text"><InlineRichText :text="item.content[currentLocale].description" /></p>
         </article>
       </section>
 
@@ -110,9 +101,10 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import InlineRichText from '../Common/InlineRichText.vue'
 import { useExperiencesData } from '../../content/data/experiences'
 import { useSkillsData } from '../../content/data/skills'
-import { getProfileContent, getProfileIdentity, splitUniversityPlaceholder } from '../../content/data/profile'
+import { getProfileContent, getProfileIdentity } from '../../content/data/profile'
 import { getSupportedLocale } from '../../content/locale'
 import profilePhoto from '../../../content/projects/images/business-portfolio-icon.avif'
 
@@ -126,7 +118,6 @@ const profileIdentity = getProfileIdentity()
 
 const currentLocale = computed(() => getSupportedLocale(locale.value))
 const exportProfileDescription = computed(() => getProfileContent(currentLocale.value).exportDescription)
-const exportProfileDescriptionParts = computed(() => splitUniversityPlaceholder(exportProfileDescription.value))
 const portfolioHomeLink = import.meta.env.BASE_URL
 const emailLink = computed(() => `mailto:${profileIdentity.email}`)
 

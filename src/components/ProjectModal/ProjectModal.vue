@@ -16,7 +16,7 @@
       </div>
       <div class="modal-body">
         <h2>{{ currentProject?.content[currentLocale].title }}</h2>
-        <p>{{ currentProject?.content[currentLocale].description }}</p>
+        <p><InlineRichText :text="currentProject?.content[currentLocale].description ?? ''" /></p>
         <div class="modal-tags">
           <h4>{{ $t('modal.technologiesUsed') }}</h4>
           <div class="technologies">
@@ -47,6 +47,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+import InlineRichText from '../Common/InlineRichText.vue'
 import { useModalLogic } from './ProjectModal'
 import { getProjectImageOrFallback } from '../../content/data/projects'
 

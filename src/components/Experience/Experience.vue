@@ -16,7 +16,7 @@
             <h3 class="timeline-role">{{ item.content[currentLocale].role }}</h3>
             <p class="timeline-company">{{ item.content[currentLocale].company }}</p>
             <p v-if="item.content[currentLocale].location" class="timeline-location">{{ item.content[currentLocale].location }}</p>
-            <p class="timeline-description">{{ item.content[currentLocale].description }}</p>
+            <p class="timeline-description"><InlineRichText :text="item.content[currentLocale].description" /></p>
           </div>
         </article>
       </div>
@@ -27,6 +27,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+import InlineRichText from '../Common/InlineRichText.vue'
 import { useExperiencesData } from '../../content/data/experiences'
 
 const { locale } = useI18n()
