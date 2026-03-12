@@ -1,0 +1,64 @@
+{
+  "misc" : {
+    "lightMode": "Light",
+    "darkMode": "Dark",
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "nav": {
+    "home": "Home",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "profile": {
+    "universityLabel": "Ecole Nationale Supérieure de Cognitique",
+    "skillsTitle": "Skills Overview"
+  },
+  "projects": {
+    "title": "Projects & Achievements",
+    "imageUnavailable": "Project preview unavailable",
+    "swipeHint": "Swipe to browse"
+  },
+  "experience": {
+    "title": "Professional Experience"
+  },
+  "contact": {
+    "title": "Let's get in touch",
+    "description": "Feel free to reach out for collaborations or just to say hi!"
+  },
+  "footer": {
+    "copyright": "© 2026 Titouan Guedon. All rights reserved.",
+    "links": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "email": "Email"
+    }
+  },
+  "modal": {
+    "visitProject": "View project",
+    "backToPortfolio": "Back to portfolio",
+    "technologiesUsed": "Technologies used"
+  },
+  "projectCard": {
+    "viewProject": "See more"
+  },
+  "exportView": {
+    "actionsLabel": "Export actions",
+    "backToPortfolio": "Back to portfolio",
+    "exportPdfJpeg": "Export PDF / JPEG",
+    "documentLabel": "Titouan Guedon export view",
+    "role": "Full-stack Engineer",
+    "contactLinks": "Contact links",
+    "profile": "Profile",
+    "attribution": "This PDF was exported from the portfolio website: {link}",
+    "previewOn": "Preview Print",
+    "previewOff": "Exit Preview",
+    "previewOnHint": "Enable print preview mode",
+    "previewOffHint": "Disable print preview mode",
+    "switchToFrench": "Switch language to French",
+    "switchToEnglish": "Switch language to English",
+    "photoAlt": "Portrait of Titouan Guedon"
+  }
+}

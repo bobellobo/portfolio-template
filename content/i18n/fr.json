@@ -1,0 +1,64 @@
+{
+  "misc" : {
+    "lightMode": "Clair",
+    "darkMode": "Sombre",
+    "previous": "Précédent",
+    "next": "Suivant"
+  },
+  "nav": {
+    "home": "Accueil",
+    "skills": "Compétences",
+    "experience": "Expériences",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "profile": {
+    "universityLabel": "Ecole Nationale Supérieure de Cognitique",
+    "skillsTitle": "Aperçu des compétences"
+  },
+  "projects": {
+    "title": "Projets et réalisations",
+    "imageUnavailable": "Aperçu du projet indisponible",
+    "swipeHint": "Glisser pour naviguer"
+  },
+  "experience": {
+    "title": "Expériences professionnelles"
+  },
+  "contact": {
+    "title": "Me contacter",
+    "description": "N'hésitez pas à me contacter pour des projets de collaboration, je suis toujours ouvert à de nouveaux projets ou simplement pour discuter !"
+  },
+  "footer": {
+    "copyright": "© 2026 Titouan Guedon. Tous droits réservés.",
+    "links": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "email": "Email"
+    }
+  },
+  "modal": {
+    "visitProject": "Voir le projet",
+    "backToPortfolio": "Retour au portfolio",
+    "technologiesUsed": "Technologies utilisées"
+  },
+  "projectCard": {
+    "viewProject": "Voir plus"
+  },
+  "exportView": {
+    "actionsLabel": "Actions d'export",
+    "backToPortfolio": "Retour au portfolio",
+    "exportPdfJpeg": "Exporter PDF / JPEG",
+    "documentLabel": "Vue d'export de Titouan Guedon",
+    "role": "Développeur Full-stack",
+    "contactLinks": "Liens de contact",
+    "profile": "Profil",
+    "attribution": "Ce PDF a été exporté depuis le site portfolio : {link}",
+    "previewOn": "Apercu Impression",
+    "previewOff": "Quitter Apercu",
+    "previewOnHint": "Activer le mode apercu impression",
+    "previewOffHint": "Desactiver le mode apercu impression",
+    "switchToFrench": "Passer la langue en français",
+    "switchToEnglish": "Passer la langue en anglais",
+    "photoAlt": "Portrait de Titouan Guedon"
+  }
+}

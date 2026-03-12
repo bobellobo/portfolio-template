@@ -1,0 +1,138 @@
+@import './styles/common.css';
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+/* ========== CSS Variables ========== */
+:root {
+    --primary-color: #c2410c;
+    --secondary-color: #9a3412;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --bg-light: #f9fafb;
+    --bg-white: #ffffff;
+    --surface-page: #f3f4f6;
+    --surface-section: #ffffff;
+    --surface-section-muted: #f9fafb;
+    --surface-header: #eef2f7;
+    --surface-navbar: #ffffff;
+    --border-color: #e5e7eb;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --text-on-brand: #ffffff;
+    --hero-subtext: rgba(255, 255, 255, 0.9);
+    --footer-bg: #1f2937;
+    --footer-text: rgba(255, 255, 255, 0.8);
+    --project-placeholder-start: #e5e7eb;
+    --project-placeholder-end: #d1d5db;
+    --overlay-color: rgba(0, 0, 0, 0.5);
+    --focus-ring: rgba(194, 65, 12, 0.32);
+}
+
+[data-theme='dark'] {
+    --primary-color: #ea580c;
+    --secondary-color: #c2410c;
+    --text-dark: #f5f7fa;
+    --text-light: #a7afba;
+    --bg-light: #1b2028;
+    --bg-white: #232a34;
+    --surface-page: #101318;
+    --surface-section: #171c23;
+    --surface-section-muted: #1e242d;
+    --surface-header: #0d1117;
+    --surface-navbar: #1a2029;
+    --border-color: #313947;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.45);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+    --text-on-brand: #ffffff;
+    --hero-subtext: rgba(255, 255, 255, 0.92);
+    --footer-bg: #0f1319;
+    --footer-text: rgba(255, 255, 255, 0.75);
+    --project-placeholder-start: #313947;
+    --project-placeholder-end: #434c5d;
+    --overlay-color: rgba(0, 0, 0, 0.65);
+    --focus-ring: rgba(234, 88, 12, 0.38);
+}
+
+/* ========== General Styles ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Geist Mono', monospace;
+    color: var(--text-dark);
+    background-color: var(--surface-page);
+    line-height: 1.6;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* ========== Typography ========== */
+h1, h2, h3 {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.1rem;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    h3 {
+        font-size: 1.35rem;
+    }
+}
+
+@media (max-width: 640px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+}
