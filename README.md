@@ -1,6 +1,6 @@
 Bilingual portfolio template built with Vue 3, Vite, and TypeScript.
 
-**Live Site:** Set this to your deployed GitHub Pages URL.
+**Live Site:** [Template preview](https://bobellobo.github.io/portfolio-scaffolder/)
 
 This repo was templated from my own personal portfolio website, hosted on github pages.
 The goal is to allow anyone to use this repo as a template to do the same, from bootstraping the website with personal config, to editing and deploying to github pages easily. 
