@@ -1,4 +1,4 @@
-import rawTheme from '@content/config/earthyTheme.json'
+import rawTheme from '@content/config/softPastelTheme.json'
 
 type ThemeVars = Record<string, string>
 

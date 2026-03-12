@@ -71,13 +71,21 @@ Each block defines the color palette for light and dark mode respectively. All v
 
 ---
 
-## `alternativeTheme.json` — Amber/violet theme
+## `amberVioletTheme.json` — Amber/violet theme
 
 A warm amber/slate light mode paired with a deep violet dark mode, using **Inter + Playfair Display** fonts.
 
 ## `earthyTheme.json` — Terracotta/espresso theme
 
 A warm editorial theme with a cream/terracotta light mode and a deep espresso/coral dark mode, using **Lora + Raleway** serif fonts. Drastically different in character from the blue/tech look of the default theme.
+
+## `neonHackerTheme.json` — Neon hacker/cyberpunk theme
+
+A high-contrast cyber style with glowing green accents on dark mode and electric cyan on light mode, using **Share Tech Mono + Orbitron** for a terminal/futuristic look.
+
+## `softPastelTheme.json` — Soft pastel/editorial theme
+
+A very airy and rounded theme with pink pastel tones and spacious section rhythm, using **Nunito Sans + Cormorant Garamond**.
 
 To activate any of these alternative themes, open `src/content/data/theme.ts` and change line 1:
 
@@ -86,10 +94,16 @@ To activate any of these alternative themes, open `src/content/data/theme.ts` an
 import rawTheme from '@content/config/theme.json'
 
 // amber/violet
-import rawTheme from '@content/config/alternativeTheme.json'
+import rawTheme from '@content/config/amberVioletTheme.json'
 
 // terracotta/espresso
 import rawTheme from '@content/config/earthyTheme.json'
+
+// neon hacker
+import rawTheme from '@content/config/neonHackerTheme.json'
+
+// soft pastel
+import rawTheme from '@content/config/softPastelTheme.json'
 ```
 
 You can also duplicate any of these files, rename it, and point the import to your own file to create a fully custom theme.

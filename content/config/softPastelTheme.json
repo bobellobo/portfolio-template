@@ -1,0 +1,71 @@
+{
+  "_readme": "Soft pastel / airy editorial style.",
+  "fonts": {
+    "_comment": "Friendly rounded sans + elegant serif headings",
+    "bodyFont": "'Nunito Sans', sans-serif",
+    "headingFont": "'Cormorant Garamond', serif",
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap"
+  },
+  "shape": {
+    "_comment": "Very soft cards and buttons",
+    "radiusPill": "9999px",
+    "radiusLg": "1.35rem",
+    "radiusMd": "1rem",
+    "radiusSm": "0.9rem",
+    "radiusTag": "0.8rem"
+  },
+  "spacing": {
+    "_comment": "More breathing room",
+    "sectionPaddingY": "7.5rem"
+  },
+  "light": {
+    "_comment": "Pastel day mode",
+    "primaryColor": "#ff6ea8",
+    "secondaryColor": "#e04f8c",
+    "textDark": "#3b2f42",
+    "textLight": "#7a6a84",
+    "bgLight": "#fff6fb",
+    "bgWhite": "#fffafd",
+    "surfacePage": "#fdf4fb",
+    "surfaceSection": "#fffafd",
+    "surfaceSectionMuted": "#fff3fa",
+    "surfaceHeader": "#fde9f6",
+    "surfaceNavbar": "#fffafd",
+    "borderColor": "#f4cfe4",
+    "shadow": "0 6px 14px rgba(255, 110, 168, 0.12)",
+    "shadowLg": "0 14px 24px rgba(255, 110, 168, 0.16)",
+    "textOnBrand": "#ffffff",
+    "heroSubtext": "rgba(255, 255, 255, 0.9)",
+    "footerBg": "#3b2f42",
+    "footerText": "rgba(255, 237, 248, 0.82)",
+    "projectPlaceholderStart": "#f9dced",
+    "projectPlaceholderEnd": "#f4c7e1",
+    "overlayColor": "rgba(50, 25, 45, 0.5)",
+    "focusRing": "rgba(255, 110, 168, 0.34)"
+  },
+  "dark": {
+    "_comment": "Pastel dusk mode",
+    "primaryColor": "#ff8ec0",
+    "secondaryColor": "#f06cab",
+    "textDark": "#f9e9f2",
+    "textLight": "#c8a9bb",
+    "bgLight": "#241a28",
+    "bgWhite": "#2e2234",
+    "surfacePage": "#1a131f",
+    "surfaceSection": "#241a28",
+    "surfaceSectionMuted": "#2b2031",
+    "surfaceHeader": "#140f18",
+    "surfaceNavbar": "#241a28",
+    "borderColor": "#4f3b5a",
+    "shadow": "0 6px 14px rgba(0, 0, 0, 0.42)",
+    "shadowLg": "0 14px 24px rgba(0, 0, 0, 0.5)",
+    "textOnBrand": "#ffffff",
+    "heroSubtext": "rgba(249, 233, 242, 0.92)",
+    "footerBg": "#120d15",
+    "footerText": "rgba(244, 204, 226, 0.74)",
+    "projectPlaceholderStart": "#4f3b5a",
+    "projectPlaceholderEnd": "#644a72",
+    "overlayColor": "rgba(15, 10, 18, 0.68)",
+    "focusRing": "rgba(255, 142, 192, 0.4)"
+  }
+}
