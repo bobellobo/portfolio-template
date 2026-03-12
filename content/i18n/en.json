@@ -29,12 +29,7 @@
     "description": "Feel free to reach out for collaborations or just to say hi!"
   },
   "footer": {
-    "copyright": "© 2026 Portfolio Template. All rights reserved.",
-    "links": {
-      "linkedin": "LinkedIn",
-      "github": "GitHub",
-      "email": "Email"
-    }
+    "copyright": "© 2026 Portfolio Template. All rights reserved."
   },
   "modal": {
     "visitProject": "View project",

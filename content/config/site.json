@@ -1,0 +1,6 @@
+{
+  "_readme": "Global site settings. siteTitle sets the browser tab title. defaultLanguage sets the fallback language when the user has no stored preference ('en' or 'fr'). faviconPath is the path to the favicon file relative to the site root.",
+  "siteTitle": "Your Name — Portfolio",
+  "defaultLanguage": "en",
+  "faviconPath": "/favicon.ico"
+}

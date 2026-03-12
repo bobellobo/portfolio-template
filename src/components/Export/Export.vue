@@ -102,9 +102,8 @@ import { useI18n } from 'vue-i18n'
 import InlineRichText from '../Common/InlineRichText.vue'
 import { useExperiencesData } from '../../content/data/experiences'
 import { useSkillsData } from '../../content/data/skills'
-import { getContactLinksForExport, getProfileContent, getProfileIdentity } from '../../content/data/profile'
+import { getContactLinksForExport, getProfileContent, getProfileIdentity, getProfilePhotoUrl } from '../../content/data/profile'
 import { getSupportedLocale } from '../../content/locale'
-import profilePhoto from '../../../content/projects/images/business-portfolio-icon.avif'
 
 const LANGUAGE_STORAGE_KEY = 'language'
 
@@ -113,6 +112,7 @@ const isPrintPreview = ref(false)
 const { experiences } = useExperiencesData()
 const { skills } = useSkillsData()
 const profileIdentity = getProfileIdentity()
+const profilePhoto = getProfilePhotoUrl()
 
 const currentLocale = computed(() => getSupportedLocale(locale.value))
 const exportProfileDescription = computed(() => getProfileContent(currentLocale.value).exportDescription)

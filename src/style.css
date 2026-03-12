@@ -1,57 +1,8 @@
 @import './styles/common.css';
-@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+/* Google Fonts are loaded dynamically from content/config/theme.json */
 
 /* ========== CSS Variables ========== */
-:root {
-    --primary-color: #0066ff;
-    --secondary-color: #0047cc;
-    --text-dark: #1f2937;
-    --text-light: #6b7280;
-    --bg-light: #f9fafb;
-    --bg-white: #ffffff;
-    --surface-page: #f3f4f6;
-    --surface-section: #ffffff;
-    --surface-section-muted: #f9fafb;
-    --surface-header: #eef2f7;
-    --surface-navbar: #ffffff;
-    --border-color: #e5e7eb;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
-    --text-on-brand: #ffffff;
-    --hero-subtext: rgba(255, 255, 255, 0.9);
-    --footer-bg: #1f2937;
-    --footer-text: rgba(255, 255, 255, 0.8);
-    --project-placeholder-start: #e5e7eb;
-    --project-placeholder-end: #d1d5db;
-    --overlay-color: rgba(0, 0, 0, 0.5);
-    --focus-ring: rgba(0, 102, 255, 0.32);
-}
-
-[data-theme='dark'] {
-    --primary-color: #3b82ff;
-    --secondary-color: #1d4ed8;
-    --text-dark: #f5f7fa;
-    --text-light: #a7afba;
-    --bg-light: #1b2028;
-    --bg-white: #232a34;
-    --surface-page: #101318;
-    --surface-section: #171c23;
-    --surface-section-muted: #1e242d;
-    --surface-header: #0d1117;
-    --surface-navbar: #1a2029;
-    --border-color: #313947;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.45);
-    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
-    --text-on-brand: #ffffff;
-    --hero-subtext: rgba(255, 255, 255, 0.92);
-    --footer-bg: #0f1319;
-    --footer-text: rgba(255, 255, 255, 0.75);
-    --project-placeholder-start: #313947;
-    --project-placeholder-end: #434c5d;
-    --overlay-color: rgba(0, 0, 0, 0.65);
-    --focus-ring: rgba(59, 130, 255, 0.38);
-}
-
+/* Theme colors and fonts are loaded from content/config/theme.json */
 /* ========== General Styles ========== */
 * {
     margin: 0;
@@ -64,7 +15,7 @@ html {
 }
 
 body {
-    font-family: 'Geist Mono', monospace;
+    font-family: var(--body-font);
     color: var(--text-dark);
     background-color: var(--surface-page);
     line-height: 1.6;
@@ -73,7 +24,7 @@ body {
 
 /* ========== Typography ========== */
 h1, h2, h3 {
-    font-family: 'Manrope', sans-serif;
+    font-family: var(--heading-font);
     font-weight: 700;
     margin-bottom: 1rem;
 }

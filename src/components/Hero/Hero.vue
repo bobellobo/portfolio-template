@@ -25,15 +25,15 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import heroPhoto from '@content/projects/images/business-portfolio-icon.avif'
 import InlineRichText from '../Common/InlineRichText.vue'
-import { getProfileContent } from '../../content/data/profile'
+import { getProfileContent, getProfilePhotoUrl } from '../../content/data/profile'
 import { getSupportedLocale } from '../../content/locale'
 
 const { locale } = useI18n()
 
 const currentLocale = computed(() => getSupportedLocale(locale.value))
 const profileDescription = computed(() => getProfileContent(currentLocale.value).description)
+const heroPhoto = getProfilePhotoUrl()
 
 const scrollToNextSection = () => {
   const skillsSection = document.getElementById('skills')

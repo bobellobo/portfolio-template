@@ -1,6 +1,11 @@
 import rawProfile from '@content/profile/profile.json'
 import type { SupportedLocale } from '../locale'
 
+const contentImages = import.meta.glob(
+  '../../../content/**/*.{avif,jpg,jpeg,png,webp,svg,gif}',
+  { eager: true, import: 'default' }
+)
+
 export interface ProfileTextContent {
   description: string
   exportDescription: string
@@ -8,6 +13,7 @@ export interface ProfileTextContent {
 
 export interface ProfileIdentity {
   fullName: string
+  photo?: string
   email: string
   linkedinUrl?: string
   githubUrl?: string
@@ -102,6 +108,13 @@ const getConfiguredContactLinks = (locale: SupportedLocale): ContactLink[] => {
 }
 
 export const getProfileIdentity = (): ProfileIdentity => profileData.identity
+
+export const getProfilePhotoUrl = (): string => {
+  const photoPath = profileData.identity.photo
+  if (!photoPath) return ''
+  const key = `../../../content/${photoPath}`
+  return (contentImages[key] as string) || ''
+}
 
 export const getContactLinks = (locale: SupportedLocale): ContactLink[] => {
   const configuredLinks = getConfiguredContactLinks(locale)

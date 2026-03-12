@@ -1,6 +1,7 @@
 {
   "identity": {
     "fullName": "Your Name",
+    "photo": "projects/images/business-portfolio-icon.avif",
     "email": "you@example.com",
     "linkedinUrl": "https://www.linkedin.com/in/your-handle/",
     "portfolioUrl": "https://your-username.github.io/your-portfolio/"
