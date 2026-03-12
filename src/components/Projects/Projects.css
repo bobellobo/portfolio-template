@@ -19,7 +19,7 @@
   font-size: 0.72rem;
   color: color-mix(in srgb, var(--text-light) 85%, var(--text-dark));
   letter-spacing: 0.02em;
-  font-family: 'Geist Mono', monospace;
+  font-family: var(--body-font);
   opacity: 1;
   transition: opacity 0.3s ease;
 }

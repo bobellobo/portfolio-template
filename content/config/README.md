@@ -81,7 +81,7 @@ A warm editorial theme with a cream/terracotta light mode and a deep espresso/co
 
 ## `neonHackerTheme.json` — Neon hacker/cyberpunk theme
 
-A high-contrast cyber style with glowing green accents on dark mode and electric cyan on light mode, using **Share Tech Mono + Orbitron** for a terminal/futuristic look.
+A high-contrast cyber style with glowing green accents on dark mode and electric cyan on light mode, using **Space Grotesk + Orbitron** for futuristic styling with better paragraph readability.
 
 ## `softPastelTheme.json` — Soft pastel/editorial theme
 

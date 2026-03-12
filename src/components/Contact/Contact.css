@@ -30,7 +30,7 @@ p {
   border-radius: 0.5rem;
   padding: 0.75rem 1.25rem;
   font-weight: 600;
-  font-family: 'Geist Mono', monospace;
+  font-family: var(--body-font);
   min-height: 2.75rem;
   transition: all 0.3s ease;
   box-shadow: var(--shadow);

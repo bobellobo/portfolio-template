@@ -1,4 +1,4 @@
-import rawTheme from '@content/config/softPastelTheme.json'
+import rawTheme from '@content/config/amberVioletTheme.json'
 
 type ThemeVars = Record<string, string>
 

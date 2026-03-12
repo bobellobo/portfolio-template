@@ -2,9 +2,9 @@
   "_readme": "Edit these values to customize your portfolio's colors and fonts. Use any valid CSS color (hex #rrggbb, rgb(), rgba(), hsl(), etc.) for colors.",
   "fonts": {
     "_comment": "Font families used across the site. googleFontsUrl loads the fonts — set to empty string if you use system fonts or self-host.",
-    "bodyFont": "'Geist Mono', monospace",
+    "bodyFont": "'Inter', sans-serif",
     "headingFont": "'Manrope', sans-serif",
-    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
   },
     "shape": {
       "_comment": "Border radii. 9999px = full pill, 0px = sharp corners. radiusPill: navbar & circular buttons; radiusLg: modals & dropdowns; radiusMd: cards; radiusSm: action buttons; radiusTag: skill/tech tags.",

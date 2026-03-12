@@ -1,10 +1,10 @@
 {
   "_readme": "Neon hacker / cyberpunk style. High contrast and glowing accents.",
   "fonts": {
-    "_comment": "Monospace + futuristic display stack",
-    "bodyFont": "'Share Tech Mono', monospace",
+    "_comment": "Readable geometric sans body + futuristic display headings",
+    "bodyFont": "'Space Grotesk', sans-serif",
     "headingFont": "'Orbitron', sans-serif",
-    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Share+Tech+Mono&display=swap"
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
   },
   "shape": {
     "_comment": "Mostly sharp geometry with subtle rounding",
