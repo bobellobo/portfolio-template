@@ -3,21 +3,33 @@ Bilingual portfolio template built with Vue 3, Vite, and TypeScript.
 Live site: [Template preview](https://bobellobo.github.io/portfolio-template/)
 
 This repo was templated from my own personal portfolio website, hosted on github pages.
-The goal is to allow anyone to use this repo as a template to do the same, from bootstraping the website with personal config (something I'd like to implement in the future), to editing and deploying to github pages easily. 
+The goal is to allow anyone to use this repo as a template to do the same, editing and deploying to github pages easily. 
 Because most CV designer websites suck and not very customizable, plus they are not always free. 
 
-The website also has an export feature to export all the content from the website to a pdf resume. 
-The plan is to also make this customizable with personal CSS sheet dedicated to get the intended look for the pdf. 
-I'll try to provide a detailed guide on how to use this template, how to deploy it to github pages easily and even how to add google analytics tags for you to monitor traffic on the page. 
+The website also has an export feature to export all the content from the website to a pdf resume.
 
-You'll  need to be familiar with the basic use of github for this (basic commit+push will do), as every change you make to the template content will have to be pushed to your remote branch for the deployment to happen on github pages.
+
+Below is a quickstart guide to get you up and running, and details on how to edit the content and theme of the website without touching any code.
+
+The requisites are : 
+- having an existing GitHub account to use this repo as a template for creating your own.
+- basic use of github for this ( basic commit + push will do ). Every change you make to the template content will have to be pushed to your remote branch to be deployed on github pages.
 
 ## 5-Minute Quickstart
 
-1. Use this repository as a template on GitHub.
-2. Clone your new repository.
-3. Install dependencies:
+1. Use this repository as a template on GitHub. (Click "Use this template" button on the repo page and follow the instructions to create your own repository based on this template. Name it as you wish, for example "my-portfolio").
 
+
+2. Clone your new repository from its URL (if you don't what that means, click [here](https://docs.github.com/fr/repositories/creating-and-managing-repositories/cloning-a-repository)).
+On your desktop or in your code editor terminal, run this command (replace `YOUR_USERNAME` and `YOUR_REPOSITORY_NAME` with your actual GitHub username and repository name):
+```bash
+git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git
+```
+3. In the same terminal change directory: 
+```bash
+cd YOUR_REPOSITORY_NAME
+```
+You can now install all the dependencies with npm (make sure you have Node.js and npm installed on your machine):
 ```bash
 npm install
 ```
@@ -28,24 +40,30 @@ npm install
 npm run dev
 ```
 Once you run this command, you should see a local URL in the terminal (something like `http://localhost:5173/`). 
-Open it in your browser to see the website (sometimes your code editor might open it automatically). You can now edit the content files and see the changes live in your browser. 
-When you're happy with the changes, commit and push to your remote branch to trigger the GitHub Pages deployment (cf GitHub Pages Deployment section below).
+Open it in your browser to see the website (sometimes your code editor might open it automatically). 
+You can now edit the content files and see the changes live in your browser.
 
-## GitHub Pages Deployment
+This is just the local version of the website, it is not live on the internet yet. To make it live, we still need to deploy it using GitHub pages. So let's configure that next.
 
-This repo includes a GitHub Actions workflow in `.github/workflows/deploy.yml`.
 
-What it means is that whenever you push to the `main` (or `master`) branch, GitHub will automatically build the project and deploy the `dist` folder to GitHub Pages for you.
+5. GitHub Pages Deployment
 
-To deploy:
+This repo includes a GitHub Actions workflow file in `.github/workflows/deploy.yml`.
 
-1. In your GitHub repository, go to : Settings -> Pages -> Source = GitHub Actions. 
-2. Push to `main` (or `master`).
-3. Wait for the workflow to publish the `dist` artifact. You will see the live url of the hosted page appear once this is done. Something like `https://YOUR_USERNAME.github.io/YOUR_REPOSITORY_NAME/`. You can now share this link with who you want.
+What it means is that whenever you push to the `main` (or `master`) branch, GitHub will automatically build the project and deploy the `dist` folder to GitHub Pages for you, hosting your website live.
+
+To configure, simply go to your GitHub repository, then to : Settings -> Pages -> Source = GitHub Actions. 
+
+So when you're happy with the changes you have made locally, just push to `main` (or `master`) and wait for the workflow to publish the `dist` artifact. 
+You will see the live url of the hosted page appear once this is done. Something like `https://YOUR_USERNAME.github.io/YOUR_REPOSITORY_NAME/`. Congratulations, your site is now live! You can now share this link with who you want.
+
 
 Default behavior:
 - On GitHub Pages project sites, the build uses `/{repo-name}/` as base path automatically.
 - For root-domain or custom-domain deployments, edit `.github/workflows/deploy.yml` and set `VITE_BASE_PATH: /` in the Build step.
+
+----------------------------
+
 
 ## What To Edit (No Code Needed)
 
@@ -111,3 +129,5 @@ But what you do to test if your analytics flow is correclty wired is to open you
 Then wait 24 to 48 hours so see more detailed analytics data about your website. 
 You can track a lot of differents metrics and even set up custom events to track, or alers. 
 For example, you could track the source of the traffic : social media like Linkedin, or "Direct" which means people who direclty clicked on the link without coming from another website (if they clicked it on your resume for example). 
+
+
