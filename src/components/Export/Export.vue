@@ -70,7 +70,7 @@
       <section class="resume-section">
         <h2>{{ $t('profile.skillsTitle') }}</h2>
         <div class="skills-grid">
-          <article v-for="category in skills" :key="category.id" class="skill-category">
+          <article v-for="category in filteredExportSkills" :key="category.id" class="skill-category">
             <h3>{{ category.content[currentLocale].title }}</h3>
             <ul>
               <li v-for="item in category.content[currentLocale].items" :key="item.text">{{ item.text }}</li>
@@ -101,7 +101,7 @@ import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import InlineRichText from '../Common/InlineRichText.vue'
 import { useExperiencesData } from '../../content/data/experiences'
-import { useSkillsData } from '../../content/data/skills'
+import { useSkillsData, type SkillCategory } from '../../content/data/skills'
 import { getContactLinksForExport, getProfileContent, getProfileIdentity, getProfilePhotoUrl } from '../../content/data/profile'
 import { getSupportedLocale } from '../../content/locale'
 
@@ -117,6 +117,23 @@ const profilePhoto = getProfilePhotoUrl()
 const currentLocale = computed(() => getSupportedLocale(locale.value))
 const exportProfileDescription = computed(() => getProfileContent(currentLocale.value).exportDescription)
 const exportContactLinks = computed(() => getContactLinksForExport(currentLocale.value))
+const filteredExportSkills = computed<SkillCategory[]>(() => (
+  skills.value
+    .map((category) => ({
+      ...category,
+      content: {
+        en: {
+          ...category.content.en,
+          items: category.content.en.items.filter((item) => item.isJoke !== true)
+        },
+        fr: {
+          ...category.content.fr,
+          items: category.content.fr.items.filter((item) => item.isJoke !== true)
+        }
+      }
+    }))
+    .filter((category) => category.content[currentLocale.value].items.length > 0)
+))
 const portfolioHomeLink = import.meta.env.BASE_URL
 
 const languageSwitchLabel = computed(() => (locale.value === 'fr' ? 'EN' : 'FR'))
