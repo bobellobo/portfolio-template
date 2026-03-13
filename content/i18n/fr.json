@@ -29,7 +29,9 @@
     "description": "N'hésitez pas à me contacter pour des projets de collaboration, je suis toujours ouvert à de nouveaux projets ou simplement pour discuter !"
   },
   "footer": {
-    "copyright": "© 2026 Template Portfolio. Tous droits réservés."
+    "copyright": "© 2026 Template Portfolio. Tous droits réservés.",
+    "templateCredit": "Dépôt du template original : {link}",
+    "templateCreditLabel": "github.com/bobellobo/portfolio-scaffolder"
   },
   "modal": {
     "visitProject": "Voir le projet",
