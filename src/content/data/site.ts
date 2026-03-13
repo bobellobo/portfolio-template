@@ -1,4 +1,4 @@
-import rawSite from '@content/config/site.json'
+import rawSite from '@content/themes/site.json'
 
 interface SiteConfig {
   siteTitle: string

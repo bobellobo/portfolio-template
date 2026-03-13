@@ -36,8 +36,8 @@
       "exportDescription": "Generic profile example. Replace this sentence with your own concise summary for export documents."
     },
     "fr": {
-      "description": "Bonjour!\nCeci est un exemple de profil totalement generique. Vous pouvez mentionner votre parcours, vos objectifs, ou une etape marquante comme {{link:https://example.com|un exemple de lien integre}}.\n\nRemplacez ce texte par votre resume, vos domaines forts et le type d'opportunites que vous recherchez.",
-      "exportDescription": "Exemple de profil generique. Remplacez cette phrase par votre propre resume concis pour les documents exportes."
+      "description": "Bonjour!\nCeci est un exemple de profil totalement générique. Vous pouvez mentionner votre parcours, vos objectifs, ou une étape marquante comme {{link:https://example.com|un exemple de lien intégré}}.\n\nRemplacez ce texte par votre résumé, vos domaines forts et le type d'opportunités que vous recherchez.",
+      "exportDescription": "Exemple de profil générique. Remplacez cette phrase par votre propre résumé concis pour les documents exportés."
     }
   }
 }

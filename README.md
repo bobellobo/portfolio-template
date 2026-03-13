@@ -59,72 +59,26 @@ Default behavior:
 
 ## Edit Content
 
-Edit these files only (no component code needed for basic customization):
+All end-user editing docs are now centralized in markdown guides:
 
-- `content/profile/profile.json`: name, email, intro text, and fully customizable contact links.
-- `content/experiences/experiences.json`: work history.
-- `content/projects/projects.json`: project cards and links.
-- `content/skills/skills.json`: skill categories.
-- `content/i18n/en.json`: English UI labels.
-- `content/i18n/fr.json`: French UI labels.
+- [Content Editing Guide](content/README.md)
+- [Theme & Config Guide](content/themes/README.md)
 
-Project images live in `content/projects/images/`.
+Basically, you don't need to touch code under the `src/` folder unless you want to add features or customize the website. If you just want to edit content, colors, fonts, just edit the JSON files under `content/` folder.
 
-### Inline Links In JSON Text
+### Preset Themes Available
 
-You can embed links directly in any JSON text field that is rendered through the app. For example, check the description field in `content/profile/profile.json` and the "Your University" text in the demo content.
+The project ships with multiple preset themes under `content/themes/`:
 
-Tag format:
+- `theme.json` (default)
+- `amberVioletTheme.json`
+- `earthyTheme.json`
+- `neonHackerTheme.json`
+- `softPastelTheme.json`
 
-```text
-{{link:https://example.com|Link label}}
-```
+To switch presets, update the import at the top of `src/content/data/theme.ts`.
 
-Example inside `content/profile/profile.json`:
-
-```json
-{
-	"description": "I studied at {{link:https://example.edu|Your University}} and focus on product engineering."
-}
-```
-
-Notes:
-- Supported protocols are `https://`, `http://`, `mailto:`, `tel:`, and root-relative `/` links.
-- Invalid link tags are rendered as plain text.
-
-### Contact Links (No Code Required)
-
-The contact section and export view are both driven by `content/profile/profile.json`.
-
-Use the `contactLinks` array to choose exactly which links appear (GitHub is optional and not included by default).
-
-```json
-{
-	"contactLinks": [
-		{
-			"label": { "en": "Email", "fr": "Email" },
-			"url": "mailto:you@example.com",
-			"display": "you@example.com"
-		},
-		{
-			"label": { "en": "LinkedIn", "fr": "LinkedIn" },
-			"url": "https://www.linkedin.com/in/your-handle/"
-		},
-		{
-			"label": { "en": "GitHub", "fr": "GitHub" },
-			"url": "https://github.com/your-username",
-			"includeInExport": false
-		}
-	]
-}
-```
-
-Supported fields per link:
-- `label`: text shown in the UI (single string or `{ "en": "...", "fr": "..." }`).
-- `url`: destination URL.
-- `display` (optional): custom text shown in the export resume (defaults to `label`).
-- `includeInContactSection` (optional): set to `false` to hide this link from the website contact section.
-- `includeInExport` (optional): set to `false` to hide this link from the export resume.
+For full details about colors, typography, spacing, shapes, and theme switching, see [Theme & Config Guide](content/themes/README.md).
 
 
 

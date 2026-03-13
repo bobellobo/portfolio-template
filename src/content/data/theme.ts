@@ -1,4 +1,4 @@
-import rawTheme from '@content/config/theme.json'
+import rawTheme from '@content/themes/theme.json'
 
 type ThemeVars = Record<string, string>
 

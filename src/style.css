@@ -1,8 +1,8 @@
 @import './styles/common.css';
-/* Google Fonts are loaded dynamically from content/config/theme.json */
+/* Google Fonts are loaded dynamically from content/themes/theme.json */
 
 /* ========== CSS Variables ========== */
-/* Theme colors and fonts are loaded from content/config/theme.json */
+/* Theme colors and fonts are loaded from content/themes/theme.json */
 /* ========== General Styles ========== */
 * {
     margin: 0;

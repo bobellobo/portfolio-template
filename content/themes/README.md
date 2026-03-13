@@ -1,4 +1,4 @@
-# Configuration
+# Themes And Site Settings
 
 This folder contains all the configuration files for your portfolio. You can customize the site's appearance and behaviour by editing these JSON files — no code knowledge required.
 
@@ -91,19 +91,19 @@ To activate any of these alternative themes, open `src/content/data/theme.ts` an
 
 ```ts
 // default
-import rawTheme from '@content/config/theme.json'
+import rawTheme from '@content/themes/theme.json'
 
 // amber/violet
-import rawTheme from '@content/config/amberVioletTheme.json'
+import rawTheme from '@content/themes/amberVioletTheme.json'
 
 // terracotta/espresso
-import rawTheme from '@content/config/earthyTheme.json'
+import rawTheme from '@content/themes/earthyTheme.json'
 
 // neon hacker
-import rawTheme from '@content/config/neonHackerTheme.json'
+import rawTheme from '@content/themes/neonHackerTheme.json'
 
 // soft pastel
-import rawTheme from '@content/config/softPastelTheme.json'
+import rawTheme from '@content/themes/softPastelTheme.json'
 ```
 
 You can also duplicate any of these files, rename it, and point the import to your own file to create a fully custom theme.
