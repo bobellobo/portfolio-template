@@ -1,143 +1,191 @@
 # Content Editing Guide
 
-This guide explains exactly where and how to edit your portfolio content without touching component code.
+This guide explains where and how to edit portfolio content without touching Vue component code.
 
-## What You Can Edit
+## Quick File Map
 
-All user-editable data lives in this `content/` folder.
+1. [profile/profile.json](profile/profile.json): profile identity, photo, contact links, intro text
+2. [experiences/experiences.json](experiences/experiences.json): timeline entries
+3. [projects/projects.json](projects/projects.json): project cards and links
+4. [skills/skills.json](skills/skills.json): skills categories and items
+5. [i18n/en.json](i18n/en.json): English UI labels
+6. [i18n/fr.json](i18n/fr.json): French UI labels
+7. [themes/site.json](themes/site.json): site metadata (title, default language, favicon)
+8. [themes/theme.json](themes/theme.json): visual tokens (colors, fonts, spacing, shape)
+9. [themes/README.md](themes/README.md): full theme/config details
 
-- `profile/profile.json`: identity, contact links, profile text, export summary, profile image path
-- `experiences/experiences.json`: experience timeline entries
-- `projects/projects.json`: project cards (title, description, tags, image, links)
-- `skills/skills.json`: skill categories and list items
-- `i18n/en.json`: English interface labels
-- `i18n/fr.json`: French interface labels
-- `themes/site.json`: browser tab title, default language, favicon
-- `themes/theme.json`: active theme values
-- `themes/README.md`: detailed theme/config documentation and preset theme list
+## Global Rules
 
-## Content File Rules
+1. Keep valid JSON syntax (quotes, commas, braces, brackets).
+2. Keep existing key names unless you also change source code.
+3. Update both EN and FR blocks when possible.
+4. Prefer short, readable text for export-friendly output.
 
-- Keep valid JSON syntax: quotes, commas, braces, and brackets matter.
-- Keep the same structure and field names unless you also update code.
-- Most text fields support plain text.
-- Some text fields also support inline link tags (see below).
+## Inline Links In Rich Text
 
-## Inline Links In Text Fields
-
-You can embed links in text fields rendered through rich text components.
-
-Format:
+You can embed links inside supported text fields with this format:
 
 ```text
 {{link:https://example.com|Link label}}
 ```
 
-Supported protocols:
+Supported URL formats:
 
-- `https://`
-- `http://`
-- `mailto:`
-- `tel:`
-- root-relative links like `/some-page`
+1. https://
+2. http://
+3. mailto:
+4. tel:
+5. Root-relative paths like /contact
 
-If a link is invalid, it is displayed as plain text.
+If a link is invalid, it is rendered as plain text.
 
-## Profile Editing
+## Schema Reference: profile/profile.json
 
-Edit `profile/profile.json`:
+### Root Fields
 
-- `identity.fullName`: displayed in header/export
-- `identity.photo`: path under `content/` (example: `profile/images/profile-placeholder.svg`)
-- `contactLinks`: fully customizable channels
-- `content.en.description` / `content.fr.description`: main profile section text
-- `content.en.exportDescription` / `content.fr.exportDescription`: export view summary
+| Field | Type | Required | Notes |
+| --- | --- | --- | --- |
+| identity | object | Yes | Main personal information |
+| contactLinks | array | No | Custom contact channels |
+| content | object | Yes | Localized profile text blocks |
 
-### Contact Links
+### identity
 
-Each `contactLinks` item supports:
+| Field | Type | Required | Example |
+| --- | --- | --- | --- |
+| fullName | string | Yes | John Doe |
+| photo | string | No | profile/images/profile-placeholder.svg |
+| email | string | Yes | you@example.com |
+| portfolioUrl | string | Yes | https://example.com |
 
-- `label`: either a string or localized object (`{ "en": "...", "fr": "..." }`)
-- `url`: target link
-- `display` (optional): display text in export
-- `includeInContactSection` (optional): hide from website contact section when `false`
-- `includeInExport` (optional): hide from export view when `false`
+### contactLinks[]
 
-## Experience Editing
+| Field | Type | Required | Notes |
+| --- | --- | --- | --- |
+| label | string or object | Yes | String or localized object with en/fr |
+| url | string | Yes | Full URL or mailto/tel |
+| display | string | No | Custom visible text |
+| includeInContactSection | boolean | No | Hidden from contact section when false |
+| includeInExport | boolean | No | Hidden from export when false |
 
-Edit `experiences/experiences.json` entries:
+### content.en and content.fr
 
-- `period`
-- `role`
-- `company`
-- `location`
-- `description`
+| Field | Type | Required | Notes |
+| --- | --- | --- | --- |
+| description | string | Yes | Main profile paragraph(s), supports inline links |
+| exportDescription | string | Yes | Short summary used in export view |
 
-Each entry has both `en` and `fr` content blocks.
+## Schema Reference: experiences/experiences.json
 
-## Project Editing
+File type: array of experience entries.
 
-Edit `projects/projects.json` entries:
+### experience entry
 
-- `title`
-- `description`
-- `shortDescription`
-- `image`
-- `technologies` (tags)
-- `link`
+| Field | Type | Required | Notes |
+| --- | --- | --- | --- |
+| id | number | Yes | Stable unique number |
+| content | object | Yes | Must contain en and fr blocks |
 
-### Project Images
+### content.en and content.fr
 
-Project images are expected under:
+| Field | Type | Required | Example |
+| --- | --- | --- | --- |
+| period | string | Yes | June 2021 - Present |
+| role | string | Yes | Senior Engineer |
+| company | string | Yes | Company Name |
+| location | string | Yes | City, Country |
+| description | string | Yes | Short role summary |
 
-- `content/projects/images/`
+## Schema Reference: projects/projects.json
 
-Current default image is:
+File type: array of project entries.
 
-- `content/projects/images/project-placeholder.svg`
+### project entry
 
-If an image path is missing/invalid, the app uses the same SVG fallback in `content/projects/images/`.
+| Field | Type | Required | Notes |
+| --- | --- | --- | --- |
+| id | number | Yes | Stable unique number |
+| content | object | Yes | Must contain en and fr blocks |
+| image | string | Yes | Path relative to content/projects, usually images/... |
+| technologies | string[] | Yes | Tags shown in project card/modal |
+| link | string | Yes | Project URL or # |
 
-## Skills Editing
+### content.en and content.fr
 
-Edit `skills/skills.json` by category.
+| Field | Type | Required | Notes |
+| --- | --- | --- | --- |
+| title | string | Yes | Project title |
+| description | string | Yes | Full project details |
+| shortDescription | string | Yes | Card summary text |
 
-Each item supports:
+Image folder for projects:
 
-- `text`
-- `isJoke` (optional boolean)
+1. [projects/images](projects/images)
 
-Behavior:
+Fallback image used when a path cannot be resolved:
 
-- If `isJoke: true`, the item is shown crossed out in the normal website view.
-- Joke items are automatically excluded from the export resume view.
+1. [projects/images/project-placeholder.svg](projects/images/project-placeholder.svg)
 
-## Language Labels (UI Text)
+## Schema Reference: skills/skills.json
 
-Edit:
+File type: array of skill categories.
 
-- `i18n/en.json`
-- `i18n/fr.json`
+### category entry
 
-Use these files for section titles, button labels, footer text, export labels, etc.
+| Field | Type | Required | Notes |
+| --- | --- | --- | --- |
+| id | string | Yes | Stable unique key, like domainA |
+| content | object | Yes | Must contain en and fr blocks |
 
-## Themes And Visual Settings
+### content.en and content.fr
 
-Theme and global visual config are documented in:
+| Field | Type | Required | Notes |
+| --- | --- | --- | --- |
+| title | string | Yes | Category label |
+| items | array | Yes | Skill items list |
 
-- `content/themes/README.md`
+### item in items[]
 
-That file explains:
+| Field | Type | Required | Notes |
+| --- | --- | --- | --- |
+| text | string | Yes | Skill label |
+| isJoke | boolean | No | If true, crossed out on site and excluded from export |
 
-- active theme structure (`theme.json`)
-- site settings (`site.json`)
-- all available preset themes
-- how to switch themes
+## Schema Reference: i18n/en.json and i18n/fr.json
+
+Both files are nested translation dictionaries.
+
+Rules:
+
+1. Keep the same key structure in EN and FR.
+2. Values should be strings.
+3. Keep placeholders when present (example: {link}).
+
+Example placeholder-bearing value:
+
+```json
+"templateCredit": "Original template repository: {link}"
+```
+
+## Schema Reference: themes/site.json
+
+| Field | Type | Required | Allowed values / Example |
+| --- | --- | --- | --- |
+| siteTitle | string | Yes | Your Name - Portfolio |
+| defaultLanguage | string | Yes | en or fr |
+| faviconPath | string | Yes | /favicon.ico |
+
+## Theme Tokens
+
+For color, typography, spacing, and shape tokens, use:
+
+1. [themes/theme.json](themes/theme.json)
+2. [themes/README.md](themes/README.md)
 
 ## Safe Editing Workflow
 
-1. Run locally (`npm run dev`).
-2. Edit JSON files under `content/`.
-3. Refresh and verify both EN/FR views.
-4. Verify export view (`/export` or export mode in app).
-5. Commit and push.
+1. Run npm run dev.
+2. Edit one JSON file at a time.
+3. Verify both EN and FR.
+4. Verify the export view.
+5. Commit and push once everything looks correct.

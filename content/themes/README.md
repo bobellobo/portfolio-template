@@ -14,7 +14,7 @@ This folder contains all the configuration files for your portfolio. You can cus
 
 ---
 
-## `theme.json` — Colors and fonts
+## `theme.json` — Colors and design tokens
 
 This is the active theme file loaded by the site.
 
@@ -41,6 +41,38 @@ This is the active theme file loaded by the site.
 | Field | What it controls |
 |---|---|
 | `sectionPaddingY` | Vertical padding applied to every section block. The value is scaled proportionally at smaller screen sizes. Use a larger value (e.g. `8rem`) for an airy layout or smaller (e.g. `4rem`) for a denser one |
+| `sectionPaddingYMd` | Section vertical padding on medium screens (`<= 768px`) |
+| `sectionPaddingYSm` | Section vertical padding on small screens (`<= 640px`) |
+| `sectionPaddingYXs` | Section vertical padding on extra-small screens (`<= 480px`) |
+| `containerPaddingX` | Horizontal page/container padding on desktop |
+| `containerPaddingXMd` | Horizontal padding on medium screens |
+| `containerPaddingXSm` | Horizontal padding on small screens |
+| `containerPaddingXXs` | Horizontal padding on extra-small screens |
+| `sectionTitleMarginBottom` | Bottom margin below section titles on desktop |
+| `sectionTitleMarginBottomMd` | Bottom margin below section titles on medium screens |
+| `sectionTitleMarginBottomSm` | Bottom margin below section titles on small screens |
+| `sectionTitleMarginBottomXs` | Bottom margin below section titles on extra-small screens |
+
+### `layout`
+
+| Field | What it controls |
+|---|---|
+| `contentMaxWidth` | Maximum width of section content containers |
+
+### `typography`
+
+| Field | What it controls |
+|---|---|
+| `fontSizeBody` | Base body font size |
+| `lineHeightBody` | Base body line height |
+| `h1Size` / `h2Size` / `h3Size` | Desktop heading sizes |
+| `h1SizeMd` / `h2SizeMd` / `h3SizeMd` | Heading sizes for medium screens (`<= 768px`) |
+| `h1SizeSm` / `h2SizeSm` / `h3SizeSm` | Heading sizes for small screens (`<= 640px`) |
+| `h1SizeXs` / `h2SizeXs` / `h3SizeXs` | Heading sizes for extra-small screens (`<= 480px`) |
+| `sectionTitleSize` | Standard section title size on desktop |
+| `sectionTitleSizeMd` | Standard section title size on medium screens |
+| `sectionTitleSizeSm` | Standard section title size on small screens |
+| `sectionTitleSizeXs` | Standard section title size on extra-small screens |
 
 ### `light` and `dark`
 
