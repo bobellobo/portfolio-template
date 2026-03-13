@@ -1,37 +1,31 @@
 [
     {
-    "id": "domainA",
+    "id": "1",
     "content": {
       "en": {
         "title": "Category A",
         "items": [
-          { "text": "You can add/remove skills sections as you want" },
-          { "text": "Skill 2" },
-          { "text": "Skill 3" },
-          { "text": "Skill 4" },
+          { "text": "You can add/remove skills and even sections as you want" },
           { "text": "Optional crossed-out example (check documentation)", "isJoke": true }
         ]
       },
       "fr": {
         "title": "Catégorie A",
         "items": [
-          { "text": "Vous pouvez ajouter/enlever des catégories de compétences" },
-          { "text": "Et en modifier le contenu" },
-          { "text": "Compétence 3" },
-          { "text": "Compétence 4" },
+          { "text": "Vous pouvez ajouter/enlever des compétences et même des sections" },
           { "text": "Exemple barré optionnel (voir documentation)", "isJoke": true }
         ]
       }
     }
   },
   {
-    "id": "domainB",
+    "id": "2",
     "content": {
       "en": {
         "title": "Category B",
         "items": [
           { "text": "Time to shine"                      },
-          { "text": "Don't hesitate to lie"              },
+          { "text": "Don't hesitate to exagerate"        },
           { "text": "#FakeItUntilYouMakeIt"              },
           { "text": "Open-heart surgery", "isJoke": true },
           { "text": "(who cares?)"                       }
@@ -49,8 +43,35 @@
       }
     }
   },
+      {
+    "id": "3",
+    "content": {
+      "en": {
+        "title": "Other skills",
+        "items": [
+          { "text": "Opening 47 tabs and calling it research" },
+          { "text": "Renaming files to final_v2_final_really_final"},
+          { "text": "KPI astrology"},
+          { "text": "Pretending ''low effort'' means 3 working days"},
+          { "text": "Surviving meetings that produce more meetings"}
+          
+
+        ]
+      },
+      "fr": {
+        "title": "Autres",
+        "items": [
+          { "text": "Ouvrir 47 onglets et appeler ça faire des recherches" },
+          { "text": "Renommer des fichiers en final_v2_v3_final_pour_de_vrai" },
+          { "text": "Astrologies des KPI" },
+          { "text": "LV2 en 'on se cale un point'"},
+          { "text": "Transformer les retards en 'arbitrage stratégique'"}
+        ]
+      }
+    }
+  },
   {
-    "id": "languages",
+    "id": "4",
     "content": {
       "en": {
         "title": "Languages",

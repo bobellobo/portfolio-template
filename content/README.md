@@ -117,6 +117,7 @@ File type: array of project entries.
 | title | string | Yes | Project title |
 | description | string | Yes | Full project details |
 | shortDescription | string | Yes | Card summary text |
+| technologiesLabel | string | No | Modal label shown above the technologies tags |
 
 Image folder for projects:
 

@@ -7,6 +7,7 @@ export interface ProjectContent {
   title: string
   description: string
   shortDescription: string
+  technologiesLabel?: string
 }
 
 export interface Project {

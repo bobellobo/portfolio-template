@@ -18,7 +18,7 @@
         <h2>{{ currentProject?.content[currentLocale].title }}</h2>
         <p><InlineRichText :text="currentProject?.content[currentLocale].description ?? ''" /></p>
         <div class="modal-tags">
-          <h4>{{ $t('modal.technologiesUsed') }}</h4>
+          <h4>{{ currentProject?.content[currentLocale].technologiesLabel ?? $t('modal.technologiesUsed') }}</h4>
           <div class="technologies">
             <span v-for="tech in currentProject?.technologies" :key="tech" class="modal-tag">
               {{ tech }}

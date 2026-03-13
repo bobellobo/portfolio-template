@@ -6,8 +6,7 @@ This repo was templated from my own personal portfolio website, hosted on github
 The goal is to allow anyone to use this repo as a template to do the same, editing and deploying to github pages easily. 
 Because most CV designer websites suck and not very customizable, plus they are not always free. 
 
-The website also has an export feature to export all the content from the website to a pdf resume.
-
+The website also has an export feature to export all the content from the website to a pdf resume. This way while editing the content of the website you can also update your resume and export it easily.
 
 Below is a quickstart guide to get you up and running, and details on how to edit the content and theme of the website without touching any code.
 
@@ -17,19 +16,25 @@ The requisites are :
 
 ## 5-Minute Quickstart
 
-1. Use this repository as a template on GitHub. (Click "Use this template" button on the repo page and follow the instructions to create your own repository based on this template. Name it as you wish, for example "my-portfolio").
+1. Use this repository as a template on GitHub: 
+- Click "Use this template" button on the repo page and follow the instructions to create your own repository based on this template.
+- Name it as you wish, for example "my-portfolio"
 
 
 2. Clone your new repository from its URL (if you don't what that means, click [here](https://docs.github.com/fr/repositories/creating-and-managing-repositories/cloning-a-repository)).
+
 On your desktop or in your code editor terminal, run this command (replace `YOUR_USERNAME` and `YOUR_REPOSITORY_NAME` with your actual GitHub username and repository name):
+
 ```bash
 git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git
 ```
 3. In the same terminal change directory: 
+
 ```bash
 cd YOUR_REPOSITORY_NAME
 ```
-You can now install all the dependencies with npm (make sure you have Node.js and npm installed on your machine):
+You can now install all the dependencies with npm (make sure you have Node.js and npm installed on your machine, if not check [this](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)).
+
 ```bash
 npm install
 ```
